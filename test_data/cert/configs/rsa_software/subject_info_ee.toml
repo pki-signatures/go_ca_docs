@@ -1,0 +1,7 @@
+[SUBJECT_INFO]
+commonName = "test.com"
+organization = "GO CA"
+organizationalUnit = "Development"
+
+[SUBJECT_ALT_NAME]
+dns_names = ["test.com", "check.com"]

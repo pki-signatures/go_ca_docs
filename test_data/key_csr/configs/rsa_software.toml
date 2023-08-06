@@ -1,0 +1,8 @@
+name = "rsa_software"
+
+[RSA]
+key_length = 2048
+
+[KEY_SOURCE_SOFTWARE]
+private_key_out_path = "../test_data/key_csr/data/rsa_software_private_key.pem"
+public_key_out_path = "../test_data/key_csr/data/rsa_software_public_key.pem"

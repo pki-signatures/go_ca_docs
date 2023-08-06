@@ -1,0 +1,24 @@
+name = "ecdsa_hardware"
+
+[ECDSA]
+curve = "secp256r1"
+
+[KEY_SOURCE_HARDWARE]
+p11_settings_path = "../test_data/p11/p11_settings_key_csr.toml"
+key_id = "ecdsa_hardware"
+public_key_out_path = "../test_data/key_csr/data/ecdsa_hardware_public_key.pem"
+
+[HARDWARE_PRIVATE_KEY_TEMPLATE]
+token = true 
+private = true 
+sensitive = true
+extractable = false
+decrypt = true
+sign = true
+unwrap = false
+
+[HARDWARE_PUBLIC_KEY_TEMPLATE]
+token = true
+verify = true
+encrypt = true
+wrap = false

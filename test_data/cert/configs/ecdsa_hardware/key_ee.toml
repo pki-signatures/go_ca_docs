@@ -1,0 +1,31 @@
+name = "key_ee_ecdsa_hardware"
+
+[ECDSA]
+curve = "secp256r1"
+
+[KEY_SOURCE_HARDWARE]
+p11_settings_path = "../test_data/cert/configs/ecdsa_hardware/p11_settings.toml"
+key_id = "ecdsa_ee"
+public_key_out_path = "../test_data/cert/data/ecdsa_hardware/public_key_ee.pem"
+
+[HARDWARE_PRIVATE_KEY_TEMPLATE]
+token = true 
+private = true 
+sensitive = true
+extractable = false
+decrypt = true
+sign = true
+unwrap = false
+
+[HARDWARE_PUBLIC_KEY_TEMPLATE]
+token = true
+verify = true
+encrypt = true
+wrap = false
+
+[CSR]
+csr_digest_algorithm = "sha256"
+csr_out_path = "../test_data/cert/data/ecdsa_hardware/key_ee_csr.pem"
+
+[CSR_SUBJECT_INFO]
+organizationalUnit = "Go CA generated CSR"

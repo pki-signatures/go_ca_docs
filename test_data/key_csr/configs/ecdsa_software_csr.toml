@@ -1,0 +1,33 @@
+name = "ecdsa_software_csr"
+
+[ECDSA]
+curve = "secp256r1"
+
+[KEY_SOURCE_SOFTWARE]
+private_key_out_path = "../test_data/key_csr/data/ecdsa_software_private_key_csr.pem"
+public_key_out_path = "../test_data/key_csr/data/ecdsa_software_public_key_csr.pem"
+
+[CSR]
+csr_digest_algorithm = "sha256"
+csr_out_path = "../test_data/key_csr/data/ecdsa_software_csr.pem"
+
+[CSR_SUBJECT_INFO]
+commonName = "Bilal Ashraf"
+givenName = "Bilal"
+surname = "Ashraf"
+organization = "XYZ"
+organizationalUnit = "Development"
+organizationIdentifier = "ORD-123"
+country = "PK"
+locality = "Lahore"        
+serialNumber = "1234567890"
+stateOrProvince = "Punjab"
+streetAddress = "301"
+postalCode = "456"
+custom_rdns = [
+    {oid = "2.5.4.12", value = "Mr."},
+    {oid = "2.5.4.13", value = "Test"}
+]
+
+[CSR_SUBJECT_ALT_NAME]
+dns_names = ["test.com", "check.com"]

@@ -1,0 +1,15 @@
+name = "key_ee_rsa_software.toml"
+
+[ECDSA]
+curve = "secp256r1"
+
+[KEY_SOURCE_SOFTWARE]
+private_key_out_path = "../test_data/cert/data/ecdsa_software/private_key_ee.pem"
+public_key_out_path = "../test_data/cert/data/ecdsa_software/public_key_ee.pem"
+
+[CSR]
+csr_digest_algorithm = "sha256"
+csr_out_path = "../test_data/cert/data/ecdsa_software/key_ee_csr.pem"
+
+[CSR_SUBJECT_INFO]
+organizationalUnit = "Go CA generated CSR"

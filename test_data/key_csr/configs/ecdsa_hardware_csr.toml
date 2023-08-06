@@ -1,0 +1,50 @@
+name = "ecdsa_hardware_csr"
+
+[ECDSA]
+curve = "secp256r1"
+
+[KEY_SOURCE_HARDWARE]
+p11_settings_path = "../test_data/p11/p11_settings_key_csr.toml"
+key_id = "ecdsa_hardware_csr"
+public_key_out_path = "../test_data/key_csr/data/ecdsa_hardware_public_key_csr.pem"
+
+
+[HARDWARE_PRIVATE_KEY_TEMPLATE]
+token = true 
+private = true 
+sensitive = true
+extractable = false
+decrypt = true
+sign = true
+unwrap = false
+
+[HARDWARE_PUBLIC_KEY_TEMPLATE]
+token = true
+verify = true
+encrypt = true
+wrap = false
+
+[CSR]
+csr_digest_algorithm = "sha256"
+csr_out_path = "../test_data/key_csr/data/ecdsa_hardware_csr.pem"
+
+[CSR_SUBJECT_INFO]
+commonName = "Bilal Ashraf"
+givenName = "Bilal"
+surname = "Ashraf"
+organization = "XYZ"
+organizationalUnit = "Development"
+organizationIdentifier = "ORD-123"
+country = "PK"
+locality = "Lahore"        
+serialNumber = "1234567890"
+stateOrProvince = "Punjab"
+streetAddress = "301"
+postalCode = "456"
+custom_rdns = [
+    {oid = "2.5.4.12", value = "Mr."},
+    {oid = "2.5.4.13", value = "Test CSR"}
+]
+
+[CSR_SUBJECT_ALT_NAME]
+dns_names = ["test.com", "check.com"]

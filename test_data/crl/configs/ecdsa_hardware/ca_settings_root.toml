@@ -1,0 +1,21 @@
+name = "ca_settings_root"
+
+[CA_KEY_SOURCE_HARDWARE_SETTINGS]
+p11_settings_path = "../test_data/crl/configs/ecdsa_hardware/p11_settings.toml"
+ca_key_id = "ecdsa_root"
+ca_cert_path = "../test_data/crl/data/ecdsa_hardware/cert_root.pem"
+ocsp_key_id = "ocsp_ecdsa_root"
+ocsp_cert_path = "../test_data/crl/data/ecdsa_hardware/ocsp_root.pem"
+
+[OCSP_SETTINGS]
+enabled = true
+ocsp_response_validity = "24H"
+digest_algorithm = "sha256"
+cert_id_digest_algorithm = "sha256"
+
+[CRL_SETTINGS]
+enabled = true
+digest_algorithm = "sha256"
+publish_after_every = "24H"
+crl_validity = "1MO"
+crl_publishing_path = "../test_data/crl/data/ecdsa_hardware/crl_root.crl"

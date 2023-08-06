@@ -1,0 +1,8 @@
+name = "ecdsa_software"
+
+[ECDSA]
+curve = "secp256r1"
+
+[KEY_SOURCE_SOFTWARE]
+private_key_out_path = "../test_data/key_csr/data/ecdsa_software_private_key.pem"
+public_key_out_path = "../test_data/key_csr/data/ecdsa_software_public_key.pem"

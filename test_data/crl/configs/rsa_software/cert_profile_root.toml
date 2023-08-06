@@ -1,0 +1,31 @@
+name = "cert_profile_root_rsa_software"
+
+cert_digest_algorithm = "sha256"
+
+[SELF_SIGNED_CERTIFICATE_KEY_SOFTWARE]
+private_key_path = "../test_data/crl/data/rsa_software/private_key_root.pem"
+public_key_path = "../test_data/crl/data/rsa_software/public_key_root.pem"
+
+[SUBJECT_INFO]
+commonName = "REQ"
+organization = "REQ"
+organizationalUnit = "REQ"
+country = "PK"
+
+[VALIDITY_INFO]
+duration = "20Y"
+
+[KEY_USAGES]
+enabled = true
+values = ["keyCertSign", "cRLSign"]
+
+[AUTHORITY_KEY_IDENTIFIER]
+enabled = true
+
+[SUBJECT_KEY_IDENTIFIER]
+enabled = true
+
+[BASIC_CONSTRAINTS]
+enabled = true
+is_ca = true
+path_length = -1

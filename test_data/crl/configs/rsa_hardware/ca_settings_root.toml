@@ -1,0 +1,21 @@
+name = "ca_settings_root"
+
+[CA_KEY_SOURCE_HARDWARE_SETTINGS]
+p11_settings_path = "../test_data/crl/configs/rsa_hardware/p11_settings.toml"
+ca_key_id = "rsa_root"
+ca_cert_path = "../test_data/crl/data/rsa_hardware/cert_root.pem"
+ocsp_key_id = "ocsp_root"
+ocsp_cert_path = "../test_data/crl/data/rsa_hardware/ocsp_root.pem"
+
+[OCSP_SETTINGS]
+enabled = true
+ocsp_response_validity = "24H"
+digest_algorithm = "sha256"
+cert_id_digest_algorithm = "sha256"
+
+[CRL_SETTINGS]
+enabled = true
+digest_algorithm = "sha256"
+publish_after_every = "24H"
+crl_validity = "1MO"
+crl_publishing_path = "../test_data/crl/data/rsa_hardware/crl_root.crl"

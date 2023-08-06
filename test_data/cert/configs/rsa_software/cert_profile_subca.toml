@@ -1,0 +1,54 @@
+name = "cert_profile_subca_rsa_software"
+
+cert_digest_algorithm = "sha256"
+
+[DELEGATED_CA_CERTIFICATE]
+ca_settings_path = "../test_data/cert/configs/rsa_software/ca_settings_root.toml"
+
+[SUBJECT_INFO]
+commonName = "REQ"
+organization = "REQ"
+organizationalUnit = "REQ"
+country = "PK"
+locality = "Lahore"        
+stateOrProvince = "Punjab"
+
+[VALIDITY_INFO]
+duration = "10Y"
+
+[KEY_USAGES]
+enabled = true
+values = ["keyCertSign", "cRLSign"]
+
+[EXTENDED_KEY_USAGES]
+enabled = true
+critical = false
+values = ["ServerAuth", "ClientAuth"]
+
+[AUTHORITY_KEY_IDENTIFIER]
+enabled = true
+
+[SUBJECT_KEY_IDENTIFIER]
+enabled = true
+
+[CRL_DISTRIBUTION_POINTS]
+enabled = true
+urls = ["http://root.crl.com"]
+
+[AUTHORITY_INFORMATION_ACCESS]
+enabled = true
+ocsp_urls = ["http://root.ocsp.com"]
+cert_issuer_urls = ["http://root.ca.com/root.cer"]
+
+[CERTIFICATE_POLICIES]
+enabled = true
+critical = true
+policy_infos = [
+    {policy_oid = "2.4.3.12", cps_uri = "https://cps.com", user_notice = "test certificate"},
+    {policy_oid = "2.4.3.13"}
+]
+
+[BASIC_CONSTRAINTS]
+enabled = true
+is_ca = true
+path_length = -1

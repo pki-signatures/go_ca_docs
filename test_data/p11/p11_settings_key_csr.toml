@@ -1,0 +1,7 @@
+name = "hardware_crypto_profile"
+
+module_name = "/opt/homebrew/opt/softhsm/lib/softhsm/libsofthsm2.so"
+
+slot = 535428866
+
+pin = "1234"

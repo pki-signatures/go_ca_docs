@@ -1,0 +1,20 @@
+name = "ca_settings_root"
+
+[CA_KEY_SOURCE_SOFTWARE_SETTINGS]
+ca_private_key_path = "../test_data/crl/data/ecdsa_software/private_key_root.pem"
+ca_cert_path = "../test_data/crl/data/ecdsa_software/cert_root.pem"
+ocsp_private_key_path = "../test_data/crl/data/ecdsa_software/private_key_root_ocsp.pem"
+ocsp_cert_path = "../test_data/crl/data/ecdsa_software/ocsp_root.pem"
+
+[OCSP_SETTINGS]
+enabled = true
+ocsp_response_validity = "24H"
+digest_algorithm = "sha256"
+cert_id_digest_algorithm = "sha256"
+
+[CRL_SETTINGS]
+enabled = true
+digest_algorithm = "sha256"
+publish_after_every = "24H"
+crl_validity = "1MO"
+crl_publishing_path = "../test_data/crl/data/ecdsa_software/crl_root.crl"

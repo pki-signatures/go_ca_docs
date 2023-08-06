@@ -1,0 +1,6 @@
+[ADD_REVOCATION_ENTRIES]
+entries = [
+    {serial_number = "123",revocation_date = "2022-04-04 13:19:01",revocation_reason = "unspecified"},
+    {serial_number = "456",revocation_date = "2022-04-04 13:19:01",revocation_reason = "unspecified"},
+    {serial_number = "789",revocation_date = "2022-04-04 13:19:01",revocation_reason = "keyCompromise"}
+]

@@ -1,0 +1,10 @@
+name = "ca_settings_subca_rsa_software"
+
+[CA_KEY_SOURCE_SOFTWARE_SETTINGS]
+ca_private_key_path = "../test_data/cert/data/ecdsa_software/private_key_subca.pem"
+ca_cert_path = "../test_data/cert/data/ecdsa_software/cert_subca.pem"
+
+[CRL_SETTINGS]
+digest_algorithm = "sha256"
+crl_validity = "24H"
+crl_publishing_path = "../test_data/cert/data/ecdsa_software/crl_subca.pem"

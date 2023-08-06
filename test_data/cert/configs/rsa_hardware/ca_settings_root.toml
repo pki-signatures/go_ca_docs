@@ -1,0 +1,11 @@
+name = "ca_settings_root"
+
+[CA_KEY_SOURCE_HARDWARE_SETTINGS]
+p11_settings_path = "../test_data/cert/configs/rsa_hardware/p11_settings.toml"
+ca_key_id = "rsa_root"
+ca_cert_path = "../test_data/cert/data/rsa_hardware/cert_root.pem"
+
+[CRL_SETTINGS]
+digest_algorithm = "sha256"
+crl_validity = "1MO"
+crl_publishing_path = "../test_data/cert/data/rsa_hardware/crl_root.pem"

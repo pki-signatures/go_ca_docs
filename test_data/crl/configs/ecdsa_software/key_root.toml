@@ -1,0 +1,8 @@
+name = "key_root_rsa_software"
+
+[ECDSA]
+curve = "secp384r1"
+
+[KEY_SOURCE_SOFTWARE]
+private_key_out_path = "../test_data/crl/data/ecdsa_software/private_key_root.pem"
+public_key_out_path = "../test_data/crl/data/ecdsa_software/public_key_root.pem"

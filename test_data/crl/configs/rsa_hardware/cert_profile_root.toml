@@ -1,0 +1,31 @@
+name = "cert_profile_root_rsa_hardware"
+
+cert_digest_algorithm = "sha256"
+
+[SELF_SIGNED_CERTIFICATE_KEY_HARDWARE]
+p11_settings_path = "../test_data/crl/configs/rsa_hardware/p11_settings.toml"
+key_id = "rsa_root"
+
+[SUBJECT_INFO]
+commonName = "REQ"
+organization = "REQ"
+organizationalUnit = "REQ"
+country = "PK"
+
+[VALIDITY_INFO]
+duration = "20Y"
+
+[KEY_USAGES]
+enabled = true
+values = ["keyCertSign", "cRLSign"]
+
+[AUTHORITY_KEY_IDENTIFIER]
+enabled = true
+
+[SUBJECT_KEY_IDENTIFIER]
+enabled = true
+
+[BASIC_CONSTRAINTS]
+enabled = true
+is_ca = true
+path_length = -1

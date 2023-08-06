@@ -1,0 +1,11 @@
+# Unique name of the hardware crypto profile.
+name = "hardware_crypto_profile"
+
+# PKCS#11 module name.
+module_name = "/opt/homebrew/opt/softhsm/lib/softhsm/libsofthsm2.so"
+
+# PKCS#11 slot
+slot = 535428866
+
+# PKCS#11 pin.
+pin = "1234"
