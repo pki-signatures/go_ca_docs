@@ -22,6 +22,8 @@ Note:- The go-ca CLI is written 100% in Go Language.
   - [Key CSR Settings](./docs/key_csr_settings.md)
   - [PKCS#11 Settings](./docs/p11_settings.md)
   - [Subject Information Request](./docs/subject_info_request.md)
-  - [Revocation Entries Settins](./docs/revocation_entries.md)
+  - [Revocation Entries Settings](./docs/revocation_entries.md)
 - [Available Go CA CLI commands](./go_ca_commands)
 - [Sample configuration files and associated generated data based on configuration files](./test_data)
+
+**For queries send email to: bilal.ashraf@gmail.com** 
