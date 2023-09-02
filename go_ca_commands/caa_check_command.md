@@ -34,6 +34,6 @@ Flags:
       --ca_name string              name of the CA e.g. digicert.com, letsencrypt.org, ssl.com and so on
       --domain_name string          domain or wildcard domain. It's value must be in qoutes
   -h, --help                        help for caa_check
-      --resolver_host_port string   resolver host or port of format e.g. 8.8.8.8:53
+      --resolver_host_port string   resolver host and port of format e.g. 8.8.8.8:53
   -v, --version                     version for caa_check
 ````
